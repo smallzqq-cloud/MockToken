@@ -1,0 +1,32 @@
+{
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "@primitivefi/hardhat-dodoc": "^0.2.3",
+    "dotenv": "^16.0.3",
+    "hardhat": "^2.14.0",
+    "hardhat-preprocessor": "^0.1.5"
+  },
+  "dependencies": {
+    "@divergencetech/ethier": "^0.55.0",
+    "@eth-optimism/contracts": "^0.5.40",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.8",
+    "@nomiclabs/hardhat-truffle5": "^2.0.7",
+    "@nomiclabs/hardhat-waffle": "^2.0.5",
+    "@openzeppelin/contracts": "^4.8.2",
+    "@openzeppelin/contracts-upgradeable": "^4.8.0",
+    "@openzeppelin/test-helpers": "^0.5.16",
+    "@rari-capital/solmate": "^6.4.0",
+    "erc721a-upgradeable": "^4.2.3",
+    "hardhat-contract-sizer": "^2.8.0",
+    "hardhat-deploy": "^0.11.26"
+  },
+  "scripts": {
+    "test": "forge test --fork-url https://eth-mainnet.g.alchemy.com/v2/WTwAtTTn0gPAPGxlwgyOm-I3aOCFqwqa --fork-block-number 16987270 -vvv --match-path",
+    "mock": "forge test --fork-url https://eth-goerli.g.alchemy.com/v2/Ha8QNWLcgaj-X4AhjxF8-EAmMi422x8C --fork-block-number 8792781 -vvv --match-path",
+    "mockApe": "npx hardhat run scripts/MockApe.js --network mumbai",
+    "addPool": "npx hardhat run scripts/addPool.js --network mumbai",
+    "goerli": "npx hardhat run scripts/mockToken.js --network goerli",
+    "mumbai": "npx hardhat run scripts/mockToken.js --network mumbai",
+    "hardhat": "npx hardhat run scripts/mockToken.js --network hardhat"
+  }
+}
